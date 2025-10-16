@@ -1,0 +1,25 @@
+For our Bloom filter project, I suggest we use the Brown Corpus as our dataset. It’s a classic and balanced English dataset that’s not too small and not too huge — perfect for testing.
+
+ Size: about 1 million words
+ Structure: 500 text samples, each around 2,000 words
+ Labels: grouped into 15 categories (like press, fiction, religion, government, etc.), which are often combined into 5 broad labels
+ This makes it really good for both simple membership testing and optional experiments like category-based Bloom filters.
+
+Preprocessing steps we’ll need:
+
+Lowercase all words so “The” and “the” are treated the same.
+Remove punctuation, keep only letters/numbers.
+Optionally replace numbers with a <NUM> token.
+Build a set of unique words for insertion into the Bloom filter.
+Create test sets:
+Positive set (words we inserted).
+Negative set (words not in the filter, or we can even create random fake words "afdad" to test bloom filter accuracy
+That way, we can check false positives, measure performance, and even try per-category filters if we want to explore classification.
+
+if we want to scale up we can test our bloom filter design on some high dimension datasets too but thats for later for example:
+
+Project Gutenberg
+25K+ books (~20–30M words)
+
+Europarl Corpus
+~60M words (English subset.
