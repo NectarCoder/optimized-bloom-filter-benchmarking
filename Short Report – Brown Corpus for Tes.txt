@@ -1,19 +1,1 @@
-Short Report – Brown Corpus for Test of Bloom Filter
 
-Brown Corpus is among the most prominent text datasets in computational linguistics and natural language processing. The Brown Corpus comprises approximately 1 million words, which are selected from 500 English text samples with approximately 2,000 words each. All the samples fall into one of the 15 categories like press, fiction, religion, government, and science that tend to be aggregated into 5 major labels. The dataset happens to be balanced, diverse, and highly used for linguistic and algorithmic experiments.
-
-For the project of implementing the Bloom filter with this course, this data file is the perfect medium-sized word-oriented set. The file contains real text data and is not so large that it cannot be computed. Words can be individually inserted into the Bloom filter as elements to enable us to examine membership testing, false positive characteristics, and space consumption.
-
-Preprocessing steps:
-
-Load the corpora with NLTK.
-
-Convert all the words to lowercase for consistency.
-
-Strip out punctuation and non-alphanumeric characters.
-
-Extract unique words to form the insertion set (I).
-
-Construct a query set (Q) with random or unseen terms to query membership.
-
-By running our Bloom filter on this sanitized word set, we can model realistic text-processing programs — like dictionary searches or content screening — and monitor accuracy, time-to-complete, and memory consumption. The Brown Corpus then offers a practical, exhaustive anchor for contrasting Bloom filter performance on realistic human language.
